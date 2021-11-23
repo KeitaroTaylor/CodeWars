@@ -13,3 +13,12 @@
 var FilterString = function(value) {
   return parseInt(value.replace(/[^\d]/g, ""))
 }
+
+var FilterString = function(value) {
+  let newArr = []
+  value = value.split('')
+  for (i=0; i<value.length; i++) {
+    parseInt(value[i]) == NaN ? console.log(NaN) : newArr.push(parseInt(value[i]))
+  }
+  return newArr.join('')
+}
